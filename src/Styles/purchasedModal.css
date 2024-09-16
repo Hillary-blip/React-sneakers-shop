@@ -1,0 +1,68 @@
+.bought-modal {
+    display: block !important;
+    /* Убедимся, что модальное окно показывается */
+    background-color: white;
+    width: 400px;
+    height: 100%;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(0);
+    transition: transform 0.8s ease;
+    z-index: 100;
+    /* Убедимся, что окно будет выше остальных элементов */
+
+}
+
+.product-list-inner {
+    padding: 20px;
+}
+
+
+.product-list-inner {
+    max-width: 210px;
+    max-height: 285px;
+    box-sizing: border-box;
+    border: 1px solid rgb(243, 243, 243);
+    border-radius: 40px;
+    background: rgb(255, 255, 255);
+    transition: all 0.6s;
+}
+
+.product-list-inner:hover {
+    max-width: 210px;
+    box-sizing: border-box;
+    border: 1px solid rgb(248, 248, 248);
+    border-radius: 30px;
+    box-shadow: 0px 14px 30px 0px rgba(0, 0, 0, 0.07);
+    background: rgb(255, 255, 255);
+}
+
+
+.title-modal {
+    display: flex;
+    align-items: center;
+    gap: 30%;
+}
+
+.purchased-modal{
+    display: flex;
+    flex-direction: column;
+}
+
+.Close{
+    background-color: inherit;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+.product-container{
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 1fr);
+    justify-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}

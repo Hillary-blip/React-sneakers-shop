@@ -1,0 +1,54 @@
+.product-list {
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 1fr);
+    justify-items: center;
+    gap: 15px;
+    margin-top: 30px;
+
+}
+
+.product {
+    max-width: 210px;
+    max-height: 285px;
+    box-sizing: border-box;
+    border: 1px solid rgb(243, 243, 243);
+    border-radius: 40px;
+    background: rgb(255, 255, 255);
+    transition: all 1s;
+}
+
+.product:hover {
+    max-width: 210px;
+    box-sizing: border-box;
+    border: 1px solid rgb(248, 248, 248);
+    border-radius: 40px;
+    box-shadow: 0px 14px 30px 0px rgba(0, 0, 0, 0.05);
+    background: rgb(255, 255, 255);
+}
+
+.product-inner {
+    padding: 10px 30px;
+}
+
+p {
+    margin: 0;
+}
+
+.title-product {
+    max-width: 150px;
+    font-size: 14px;
+}
+
+.price-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.add-icon,
+.green-like {
+    transition: all 0.3s ease-in-out;
+    /* Плавный переход за 0.3 секунды */
+    cursor: pointer;
+}

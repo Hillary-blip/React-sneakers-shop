@@ -1,0 +1,142 @@
+/* Оверлей для затемнения фона */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+/* Когда модальное окно открыто */
+.overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Стили модального окна */
+.modal {
+    width: 400px;
+    height: 100%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    /* Изначально скрыто за экраном */
+    transition: transform 0.8s ease;
+}
+
+/* Когда модальное окно открыто, оно заезжает */
+.overlay.open .modal {
+    transform: translateX(0);
+    /* Заезд модального окна */
+}
+
+/* Плавный выезд обратно */
+.overlay.closing .modal {
+    transform: translateX(100%);
+    /* Выезд модального окна */
+}
+
+.modal-inner {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 80vh;
+    padding-right: 10px;
+}
+
+.end-block {
+    position: absolute;
+    bottom: 55px;
+    left: 20px;
+    right: 20px;
+}
+
+.full-price,
+.nalog {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.btn-modal {
+    padding: 20px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    background: rgb(157, 213, 88);
+}
+
+.btn-empty {
+    padding: 20px 20px;
+    font-size: 16px;
+    color: white;
+    max-width: 250px;
+    border: none;
+    cursor: pointer;
+    border-radius: 18px;
+    width: 100%;
+    background: rgb(157, 213, 88);
+}
+
+.empty {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    /* Добавляем прокрутку */
+    max-height: 80vh;
+    /* Ограничиваем высоту, чтобы корзина была в пределах экрана */
+    padding-right: 10px;
+    gap: 25%;
+}
+
+
+.empty-cart {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+p {
+    margin: 0;
+    margin-bottom: 12px;
+}
+
+
+h2 {
+    margin: 0;
+    margin-bottom: 12px;
+}
+
+.order-confirmation {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-empty{
+    max-width: 330px;
+}
